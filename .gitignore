@@ -1,0 +1,79 @@
+# Unity generated files (applies to every project folder)
+*/[Ll]ibrary/
+*/[Tt]emp/
+*/[Oo]bj/
+*/[Bb]uild/
+*/[Bb]uilds/
+*/[Ll]ogs/
+*/[Uu]ser[Ss]ettings/
+*/.utmp
+*.log
+
+# I don't even think these work?
+echo "Library/" >> .gitignore
+echo "Temp/" >> .gitignore
+echo "Obj/"  >> .gitignore
+echo "Build/" >> .gitignore
+echo "Logs/" >> .gitignore
+
+# MemoryCaptures, Recordings
+*/[Mm]emoryCaptures/
+*/[Rr]ecordings/
+
+# Rider plugin
+*/[Aa]ssets/Plugins/Editor/JetBrains*
+
+# VS / VSCode / Rider / Gradle
+*/.vs/
+*/.vscode/
+*/.idea/
+*/.gradle/
+*/ExportedObj/
+*/.consulo/
+
+# Solution/project files
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Unity crash + build outputs
+*/sysinfo.txt
+*.apk
+*.aab
+*.unitypackage
+*.unitypackage.meta
+*.app
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Crashlytics
+*/crashlytics-build.properties
+
+# Addressables
+*/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+
+# Android auto-generated streaming assets
+*/[Aa]ssets/[Ss]treamingAssets/aa.meta
+*/[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Unity Package Manager cache
+*/[Pp]ackages/com.unity.package-manager*
+
+# Ensure asset metadata is kept
+!*/[Aa]ssets/**/*.meta
