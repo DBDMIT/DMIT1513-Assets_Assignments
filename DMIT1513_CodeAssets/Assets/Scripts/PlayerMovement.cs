@@ -5,12 +5,12 @@ public class PlayerMovement : MonoBehaviour
 {
     public InputAction movementAction;
     Transform t;
-    Vector2 movementVector;
+    Vector3 movementVector;
     public float movementSpeed = 1.0f;
 
     private void Start()
     {
-        movementVector = Vector2.zero;
+        movementVector = Vector3.zero;
         movementAction.Enable();
 
         t = GetComponent<Transform>();
@@ -21,8 +21,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void MoveCharacter(InputAction.CallbackContext context)
     {
-        var tmp = context.ReadValue<Vector2>(); 
-        movementVector = new Vector2(tmp.x, tmp.y);
+        var tmp = context.ReadValue<Vector3>(); 
+        movementVector = new Vector3(tmp.x, 0, tmp.y);
     }
 
     private void FixedUpdate()
