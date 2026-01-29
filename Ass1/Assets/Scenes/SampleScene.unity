@@ -792,7 +792,7 @@ GameObject:
   - component: {fileID: 344131719}
   - component: {fileID: 344131718}
   m_Layer: 5
-  m_Name: Backdrop
+  m_Name: Logo Backdrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4391,10 +4391,10 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 100, y: 100}
+  m_CellSize: {x: 160, y: 175}
   m_Spacing: {x: 0, y: 5}
   m_Constraint: 2
-  m_ConstraintCount: 3
+  m_ConstraintCount: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
