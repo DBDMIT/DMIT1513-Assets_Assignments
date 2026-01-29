@@ -24,5 +24,5 @@ public class CharacterSelectSingleton : MonoBehaviour
     {
         skin = index;
     }
-    public int GetSkin() { return skin; }
+    public int getSkin() { return skin; }
 }
