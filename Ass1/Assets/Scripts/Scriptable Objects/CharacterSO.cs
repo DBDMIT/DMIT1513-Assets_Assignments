@@ -22,6 +22,6 @@ public enum Skin
 {
     Nude,
     Witch,
-    Bikini,
-    Magic    
+    Wizard,
+    Bikini    
 }
