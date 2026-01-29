@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3c7c54f91a4c2b44abc8824ef7141ce, type: 3}
   m_Name: Ghost_Engineer
   m_EditorClassIdentifier: Assembly-CSharp::CharacterSO
-  characterName: Ghost_Engineer
+  characterName: Ghost Engineer
   characterSprite: {fileID: 21300000, guid: 8bc5223e7d42cf441b99a9e66f4eb70f, type: 3}
   strength: 1
-  speed: 2
-  durability: 2
+  speed: 1
+  durability: 1
   weaponType: 0
-  prefab: {fileID: 0}
+  prefab: {fileID: 476943561805097675, guid: 25bad28d9e2c5e744acbd347a9512a1b, type: 3}

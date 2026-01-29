@@ -14,8 +14,8 @@ public class CharacterSO : ScriptableObject
 public enum WeaponType
 {
     Sword,
-    Gun,
-    Punch
+    Staff,
+    Bomb
 }
 
 public enum Skin

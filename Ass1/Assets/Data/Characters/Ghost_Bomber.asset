@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3c7c54f91a4c2b44abc8824ef7141ce, type: 3}
   m_Name: Ghost_Bomber
   m_EditorClassIdentifier: Assembly-CSharp::CharacterSO
-  characterName: 
-  characterSprite: {fileID: 0}
-  strength: 0
-  speed: 0
-  durability: 0
+  characterName: Ghost Bomber
+  characterSprite: {fileID: 21300000, guid: 9cf1fa08046fb844bbd4966e85fd5abc, type: 3}
+  strength: 1
+  speed: 1
+  durability: 1
   weaponType: 0
   prefab: {fileID: 6837771252096037360, guid: 2e81cee91e5d99a4a897b5a469c22f82, type: 3}
