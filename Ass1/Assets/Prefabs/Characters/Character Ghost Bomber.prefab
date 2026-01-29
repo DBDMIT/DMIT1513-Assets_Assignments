@@ -9,7 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 528027327374395292}
-  - component: {fileID: 352166643160597679}
+  - component: {fileID: 4924444229617678663}
+  - component: {fileID: 78528320146713864}
+  - component: {fileID: 3355802777278758668}
   - component: {fileID: 3166029804016855251}
   m_Layer: 0
   m_Name: Character Ghost Bomber
@@ -26,15 +28,23 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6837771252096037360}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.35, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 0}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0.7071068, w: 0}
+  m_LocalPosition: {x: 6, y: 2.5, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &352166643160597679
-SpriteRenderer:
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
+--- !u!33 &4924444229617678663
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6837771252096037360}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &78528320146713864
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -48,7 +58,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
@@ -58,7 +68,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ee9ca5f5566ef3a498058204110fb52d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -71,7 +81,7 @@ SpriteRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -80,17 +90,29 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9cf1fa08046fb844bbd4966e85fd5abc, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.27, y: 0.27}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3355802777278758668
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6837771252096037360}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &3166029804016855251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,44 +129,44 @@ MonoBehaviour:
     m_Name: Movement
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: 8544c7f6-d278-4591-9023-961a185337a2
+    m_Id: 18d7a6ae-2c7f-4a37-ae50-030038e6030e
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 2D Vector
-      m_Id: cdb468c7-c8ab-4323-ab4d-26ff8898a02f
+      m_Id: 9ac2927f-3a2a-41d0-9b3e-ffab8dcbd66c
       m_Path: 2DVector
       m_Interactions: 
       m_Processors: 
       m_Groups: 
       m_Action: Movement
       m_Flags: 4
-    - m_Name: Up
-      m_Id: a63b6c63-aa8f-457d-ba8a-948addf0c6f2
+    - m_Name: up
+      m_Id: f8f78b17-fce5-4017-be2e-70919d5b7ae1
       m_Path: <Keyboard>/w
       m_Interactions: 
       m_Processors: 
       m_Groups: 
       m_Action: Movement
       m_Flags: 8
-    - m_Name: Down
-      m_Id: 4d20d53f-7b71-4373-a614-8cf9c1e03039
+    - m_Name: down
+      m_Id: 9aee045e-78e4-4055-ad71-7429d5da22bb
       m_Path: <Keyboard>/s
       m_Interactions: 
       m_Processors: 
       m_Groups: 
       m_Action: Movement
       m_Flags: 8
-    - m_Name: Left
-      m_Id: 7b484b35-3e3a-41a8-9bc8-a4143e1c53dd
+    - m_Name: left
+      m_Id: cc91e3ec-d77b-490d-b62a-2199f75e323f
       m_Path: <Keyboard>/a
       m_Interactions: 
       m_Processors: 
       m_Groups: 
       m_Action: Movement
       m_Flags: 8
-    - m_Name: Right
-      m_Id: 1c4dcbbe-be0f-4b92-9e08-60aa8c8a1ac9
+    - m_Name: right
+      m_Id: 80f17528-37f4-4e23-b3f0-631b5e99f7b3
       m_Path: <Keyboard>/d
       m_Interactions: 
       m_Processors: 
