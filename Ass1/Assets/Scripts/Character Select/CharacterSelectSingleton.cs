@@ -7,6 +7,7 @@ public class CharacterSelectSingleton : MonoBehaviour
     public string weaponType;
     public string gamertag;
     public int skin = 0;
+
     private void Start()
     {
         if (Instance == null) Instance = this;
@@ -23,5 +24,5 @@ public class CharacterSelectSingleton : MonoBehaviour
     {
         skin = index;
     }
-    public int getSkin() { return skin; }
+    public int GetSkin() { return skin; }
 }
