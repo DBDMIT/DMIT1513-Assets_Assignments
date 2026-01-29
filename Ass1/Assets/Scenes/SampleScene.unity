@@ -643,63 +643,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!1001 &247078123
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 237553298748419630, guid: 9393d6f1b3d10d24fbf15b297fa9b8dc, type: 3}
-      propertyPath: m_Name
-      value: Character Ghost Bomber
-      objectReference: {fileID: 0}
-    - target: {fileID: 7899068817228499300, guid: 9393d6f1b3d10d24fbf15b297fa9b8dc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.25703
-      objectReference: {fileID: 0}
-    - target: {fileID: 7899068817228499300, guid: 9393d6f1b3d10d24fbf15b297fa9b8dc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.50788
-      objectReference: {fileID: 0}
-    - target: {fileID: 7899068817228499300, guid: 9393d6f1b3d10d24fbf15b297fa9b8dc, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.00837
-      objectReference: {fileID: 0}
-    - target: {fileID: 7899068817228499300, guid: 9393d6f1b3d10d24fbf15b297fa9b8dc, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7899068817228499300, guid: 9393d6f1b3d10d24fbf15b297fa9b8dc, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7899068817228499300, guid: 9393d6f1b3d10d24fbf15b297fa9b8dc, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7899068817228499300, guid: 9393d6f1b3d10d24fbf15b297fa9b8dc, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7899068817228499300, guid: 9393d6f1b3d10d24fbf15b297fa9b8dc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7899068817228499300, guid: 9393d6f1b3d10d24fbf15b297fa9b8dc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7899068817228499300, guid: 9393d6f1b3d10d24fbf15b297fa9b8dc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9393d6f1b3d10d24fbf15b297fa9b8dc, type: 3}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2362,7 +2305,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1007935304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2421,7 +2364,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 1
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -2460,11 +2403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterSelectScreen
   characterList:
   - {fileID: 11400000, guid: c613d280b73d3444a91d41532ac83118, type: 2}
-  - {fileID: 11400000, guid: c613d280b73d3444a91d41532ac83118, type: 2}
-  - {fileID: 11400000, guid: c613d280b73d3444a91d41532ac83118, type: 2}
-  - {fileID: 11400000, guid: c613d280b73d3444a91d41532ac83118, type: 2}
-  - {fileID: 11400000, guid: c613d280b73d3444a91d41532ac83118, type: 2}
-  - {fileID: 11400000, guid: c613d280b73d3444a91d41532ac83118, type: 2}
+  - {fileID: 11400000, guid: 3670fdfd60290d04384ed8012fbc05a4, type: 2}
   - {fileID: 11400000, guid: c613d280b73d3444a91d41532ac83118, type: 2}
   parent: {fileID: 1990355856}
   buttonPrefab: {fileID: 2947073312829137511, guid: 482885f493549ee4eb98c31f33813386, type: 3}
@@ -2597,14 +2536,14 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
-  m_enableVertexGradient: 0
+  m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
     topRight: {r: 1, g: 1, b: 1, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
+  m_fontColorGradientPreset: {fileID: 11400000, guid: 69a525efa7e6472eab268f6ea605f06e, type: 2}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
@@ -3130,7 +3069,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1353862017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3281,8 +3220,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278264385
-  m_fontColor: {r: 0.254717, g: 0.13298297, b: 0.0036044791, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
@@ -4063,15 +4002,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 881881b44a5fb9f42b9cfc073e385e0c, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4429,7 +4368,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -87}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1990355857
@@ -4468,4 +4407,3 @@ SceneRoots:
   - {fileID: 1353862020}
   - {fileID: 1007935307}
   - {fileID: 195935948}
-  - {fileID: 247078123}

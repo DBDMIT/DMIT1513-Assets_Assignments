@@ -20,7 +20,7 @@ public enum WeaponType
 
 public enum Skin
 {
-    Nude,
+    Default,
     Witch,
     Wizard,
     Bikini    
