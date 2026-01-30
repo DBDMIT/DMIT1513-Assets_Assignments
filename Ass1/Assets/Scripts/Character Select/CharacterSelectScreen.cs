@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -15,19 +16,26 @@ public class CharacterSelectScreen : MonoBehaviour
     public static CharacterSelectScreen Instance;
 
     public List<Button> buttonReferences;
+    public bool initialInstantiation = false;
 
     [ContextMenu("debug")]
+
     public void InstantiateCharacterSelect()
     {
-        foreach(CharacterSO character in characterList)
+        if (!initialInstantiation)
         {
-            GameObject tmp = Instantiate(buttonPrefab, parent);
-            Image portrait = tmp.GetComponentsInChildren<Image>()[1];
-            portrait.sprite = character.characterSprite;
+            foreach(CharacterSO character in characterList)
+            {
+                GameObject tmp = Instantiate(buttonPrefab, parent);
+                Image portrait = tmp.GetComponentsInChildren<Image>()[1];
+                portrait.sprite = character.characterSprite;
 
-            Button b = tmp.GetComponent<Button>();
-            buttonReferences.Add(b);
-            b.onClick.AddListener(delegate { SelectCharacter(character); });
+                Button b = tmp.GetComponent<Button>();
+                buttonReferences.Add(b);
+                b.onClick.AddListener(delegate { SelectCharacter(character); });
+            }
+
+            initialInstantiation = true;
         }
     }
 

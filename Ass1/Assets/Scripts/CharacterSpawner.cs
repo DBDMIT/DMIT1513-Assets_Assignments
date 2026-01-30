@@ -6,6 +6,7 @@ public class CharacterSpawner : MonoBehaviour
 {
     public Transform spawnPoint;
     public List<Material> materials = new List<Material>();
+    public int skinIndexHelper = 0;
 
     public void Spawncharacter()
     {
@@ -13,6 +14,17 @@ public class CharacterSpawner : MonoBehaviour
         GameObject tmp = Instantiate(characterPrefab, spawnPoint);
 
         MeshRenderer mr = tmp.GetComponent<MeshRenderer>();
-        mr.sharedMaterial = materials[CharacterSelectSingleton.Instance.getSkin()];
+
+        if (characterPrefab.gameObject.name == "Character Ghost Engineer")
+        {
+            skinIndexHelper = 4;
+        }
+
+        if (characterPrefab.gameObject.name == "Character Ghost Bomber")
+        {
+            skinIndexHelper = 8;
+        }
+
+        mr.sharedMaterial = materials[CharacterSelectSingleton.Instance.getSkin() + skinIndexHelper];
     }
 }
