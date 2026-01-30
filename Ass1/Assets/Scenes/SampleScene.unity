@@ -362,6 +362,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1695203876}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &35375834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -883,19 +895,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beb19b4c437ea5144b8d16143224cec0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponSelect
+  initialInstantiation: 0
   customizationOptions:
   - Sword
   - Staff
   - Bomb
+  buttonReferences: []
+  sprites:
+  - {fileID: 21300000, guid: e09bf2dd6e9498d4ab40f5015735c860, type: 3}
+  - {fileID: 21300000, guid: 7f6889abb757341409e01874e92343bc, type: 3}
+  - {fileID: 21300000, guid: 0b4e4ddee94e54d45b158aabc2fc061d, type: 3}
+  - {fileID: 21300000, guid: ac8120297813bed409ca5212b8b1aab8, type: 3}
   buttonPrefab: {fileID: 8134996855607276715, guid: 0287170410c86594599f52aee4618f7f, type: 3}
   parent: {fileID: 1328175953}
   OnWeaponSelected:
     m_PersistentCalls:
-      m_Calls: []
-  sprites:
-  - {fileID: 21300000, guid: 7f6889abb757341409e01874e92343bc, type: 3}
-  - {fileID: 21300000, guid: c87053bd45ce6bb46bd41ec6d03266f9, type: 3}
-  - {fileID: 21300000, guid: ac8120297813bed409ca5212b8b1aab8, type: 3}
+      m_Calls:
+      - m_Target: {fileID: 195935949}
+        m_TargetAssemblyTypeName: WeaponSelect, Assembly-CSharp
+        m_MethodName: DisableButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &293629778
 GameObject:
   m_ObjectHideFlags: 0
@@ -2711,6 +2738,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 195935949}
+        m_TargetAssemblyTypeName: WeaponSelect, Assembly-CSharp
+        m_MethodName: EnableButtons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1000508166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2865,6 +2904,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75a1a93af542a384ca74756c8ac4ea5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterSelectScreen
+  initialInstantiation: 0
+  buttonReferences: []
+  sprites:
+  - {fileID: 21300000, guid: e09bf2dd6e9498d4ab40f5015735c860, type: 3}
   characterList:
   - {fileID: 11400000, guid: c613d280b73d3444a91d41532ac83118, type: 2}
   - {fileID: 11400000, guid: 3670fdfd60290d04384ed8012fbc05a4, type: 2}
@@ -2910,7 +2953,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  buttonReferences: []
 --- !u!1 &1039037260
 GameObject:
   m_ObjectHideFlags: 0
