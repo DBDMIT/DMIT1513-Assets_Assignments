@@ -9,10 +9,8 @@ public class VehicleMovement : MonoBehaviour
     public float moveSpeed = 1.0f;
     public float rotationSpeed = 1.0f;
 
-
     float movementDirection;
     float rotationDirection;
-
 
     public float maxLinearSpeed;
     public float currentLinearSpeed;
@@ -20,9 +18,7 @@ public class VehicleMovement : MonoBehaviour
     public float maxAngularSpeed;
     public float currentAngularSpeed;
 
-
     Rigidbody rb;
-
 
     private const float ACCELERATION_FACTOR = 20f;
     private const float ROTATION_FACTOR = 40f;
@@ -46,15 +42,12 @@ public class VehicleMovement : MonoBehaviour
     private void MoveVehicle(InputAction.CallbackContext context)
     {
         movementDirection = context.ReadValue<float>() * ACCELERATION_FACTOR;
-        
     }
 
     private void RotateVehicle(InputAction.CallbackContext context)
     {
         rotationDirection = context.ReadValue<float>() * ROTATION_FACTOR;
     }
-
- 
 
     private void FixedUpdate()
     {
@@ -65,9 +58,15 @@ public class VehicleMovement : MonoBehaviour
         rb.AddTorque(Vector3.up * rotationDirection, ForceMode.Acceleration);
         //armRb.AddTorque()
         //bucketRB.AddTorque()
-        if (currentLinearSpeed > maxLinearSpeed) rb.linearVelocity = rb.linearVelocity.normalized
-                * maxLinearSpeed;
-        if (currentAngularSpeed > maxAngularSpeed) rb.angularVelocity = rb.angularVelocity.normalized * maxAngularSpeed;
-        
+
+        if (currentLinearSpeed > maxLinearSpeed)
+        {
+            rb.linearVelocity = rb.linearVelocity.normalized * maxLinearSpeed;
+        }
+
+        if (currentAngularSpeed > maxAngularSpeed)
+        {
+            rb.angularVelocity = rb.angularVelocity.normalized * maxAngularSpeed;
+        }
     }
 }
