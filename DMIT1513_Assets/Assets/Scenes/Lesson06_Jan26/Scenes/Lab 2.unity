@@ -389,6 +389,7 @@ GameObject:
   - component: {fileID: 64876554}
   - component: {fileID: 64876553}
   - component: {fileID: 64876552}
+  - component: {fileID: 64876557}
   - component: {fileID: 64876556}
   m_Layer: 0
   m_Name: Cube (1)
@@ -501,9 +502,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 956d3e492b0c1584cb37090911672845, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
-  maxMoveRange: {x: 1, y: 0, z: 0}
-  startingPosition: {x: 0, y: 3, z: 0}
-  moveSpeed: 2
+  maxMoveRange: {x: 3, y: 0, z: 0}
+  startingPosition: {x: 0, y: 0, z: 0}
+  moveSpeed: 3
+  rb: {fileID: 64876557}
+--- !u!54 &64876557
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64876551}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &96452628
 GameObject:
   m_ObjectHideFlags: 0
@@ -1514,7 +1543,8 @@ GameObject:
   - component: {fileID: 1005882313}
   - component: {fileID: 1005882312}
   - component: {fileID: 1005882317}
-  - component: {fileID: 1005882316}
+  - component: {fileID: 1005882318}
+  - component: {fileID: 1005882319}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -1610,29 +1640,14 @@ Transform:
   m_GameObject: {fileID: 1005882311}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalPosition: {x: 0, y: 2.4, z: -5.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1283808753}
   - {fileID: 1595236115}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!138 &1005882316
-FixedJoint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1005882311}
-  serializedVersion: 1
-  m_ConnectedBody: {fileID: 1283808754}
-  m_ConnectedArticulationBody: {fileID: 0}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
 --- !u!54 &1005882317
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1658,8 +1673,104 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &1005882318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005882311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd0c70a0082ee324eb6763b6461fb2c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  movementAction:
+    m_Name: Movement
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: b422899c-0c9d-4fd7-a594-a35cb6a9829c
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 2D Vector
+      m_Id: 15ec24a0-5fa7-459e-88a5-565115c848ac
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 4
+    - m_Name: up
+      m_Id: c0081575-6c0a-4e20-b4c2-54310faca4d4
+      m_Path: <Keyboard>/w
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 8
+    - m_Name: down
+      m_Id: c1db5a3c-ae03-4bfd-949e-e20a6b14724a
+      m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 8
+    - m_Name: left
+      m_Id: f946fc39-aa75-4582-ad87-66ea2d184e01
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 8
+    - m_Name: right
+      m_Id: 599777ae-6628-4c6c-84b4-b4bbbf785f00
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 8
+    m_Flags: 0
+  moveSpeed: 5
+--- !u!114 &1005882319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005882311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4931346c5e3914aa7d79abf4374306, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HoverNew
+  baseHoverHeight: 3
+  maxHoverHeight: 6
+  riseSpeed: 2.5
+  springStrength: 60
+  damping: 10
+  hover:
+    m_Name: Hover
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: f43e153a-82d0-4239-bdf5-1c8a7552d423
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 22fa2b28-4911-4de8-8c4a-f5a430063e3f
+      m_Path: <Keyboard>/space
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Hover
+      m_Flags: 0
+    m_Flags: 0
 --- !u!1 &1032267625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1950,122 +2061,13 @@ GameObject:
   - component: {fileID: 1283808753}
   - component: {fileID: 1283808752}
   - component: {fileID: 1283808751}
-  - component: {fileID: 1283808750}
-  - component: {fileID: 1283808749}
-  - component: {fileID: 1283808754}
-  - component: {fileID: 1283808755}
   m_Layer: 0
   m_Name: hovercraft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1283808749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1283808748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a4016072627ac14ab89c2863d14af83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VehicleMovement
-  movementAction:
-    m_Name: Movement
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 071f3a28-33cf-4a87-ab57-24e9b59e68de
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 1D Axis
-      m_Id: bed5778f-76d7-452b-b86c-01e270de72d7
-      m_Path: 1DAxis
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Movement
-      m_Flags: 4
-    - m_Name: negative
-      m_Id: 278d10fd-39c2-4009-b30c-7344204cc298
-      m_Path: <Keyboard>/s
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Movement
-      m_Flags: 8
-    - m_Name: positive
-      m_Id: 73ff9bca-fd90-4582-be82-ca1ec6c0a871
-      m_Path: <Keyboard>/w
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Movement
-      m_Flags: 8
-    m_Flags: 0
-  rotationAction:
-    m_Name: Rotation
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: e623edd1-6f96-41a7-9396-b15e799681b4
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 1D Axis
-      m_Id: 4da04042-2177-4111-9093-837a93b9e4f5
-      m_Path: 1DAxis
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Rotation
-      m_Flags: 4
-    - m_Name: negative
-      m_Id: aa05c7e0-7d7c-46d1-8b70-514703c3f66a
-      m_Path: <Keyboard>/a
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Rotation
-      m_Flags: 8
-    - m_Name: positive
-      m_Id: b853703c-15c9-44b8-9cfd-c51cf8df5c0b
-      m_Path: <Keyboard>/d
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Rotation
-      m_Flags: 8
-    m_Flags: 0
-  moveSpeed: 10
-  rotationSpeed: 10
-  maxLinearSpeed: 20
-  currentLinearSpeed: 0
-  maxAngularSpeed: 10
-  currentAngularSpeed: 0
---- !u!65 &1283808750
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1283808748}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_IsActive: 1
 --- !u!23 &1283808751
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2130,73 +2132,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1283808748}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 2.2171, z: -0.6836}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.2170999, z: -0.6836}
   m_LocalScale: {x: 0.640125, y: 1.1956868, z: 0.3671956}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1005882315}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &1283808754
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1283808748}
-  serializedVersion: 5
-  m_Mass: 5
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &1283808755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1283808748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3870e22f51ef89e468dee9fabcc64273, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Hover
-  antiGravForce: 0
-  distanceFromGround: 0
-  hover:
-    m_Name: Hover
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 91d63f08-a250-427b-a4df-2f551c2b2fff
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: b3f7e766-fd18-40b5-ad12-6f981b6b852a
-      m_Path: <Keyboard>/space
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Hover
-      m_Flags: 0
-    m_Flags: 0
-  hoverMod: 0
-  hoverDecellerate: -0.05
 --- !u!1 &1337839866
 GameObject:
   m_ObjectHideFlags: 0
@@ -2465,7 +2407,7 @@ Transform:
   m_GameObject: {fileID: 1595236112}
   serializedVersion: 2
   m_LocalRotation: {x: 0.07367334, y: 0, z: 0, w: 0.9972825}
-  m_LocalPosition: {x: 0, y: 2.43, z: -5.53}
+  m_LocalPosition: {x: 0, y: 3.15, z: -6.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3605,6 +3547,5 @@ SceneRoots:
   - {fileID: 513712536}
   - {fileID: 1838056243}
   - {fileID: 199228545}
-  - {fileID: 1283808753}
   - {fileID: 1005882315}
   - {fileID: 64876555}
