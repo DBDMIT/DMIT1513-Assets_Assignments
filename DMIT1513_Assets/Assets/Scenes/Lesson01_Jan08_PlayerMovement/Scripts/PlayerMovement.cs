@@ -5,7 +5,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public InputAction movementAction;
     Transform t;
-    Vector3 movementVector;
+    public Vector3 movementVector;
     public float moveSpeed = 1.0f;
 
     private void Start()
@@ -30,10 +30,8 @@ public class PlayerMovement : MonoBehaviour
         //t.position += movementVector * moveSpeed * Time.deltaTime;
 
         Vector3 v = GetComponent<Rigidbody>().linearVelocity;
-        v.x = movementVector.x * moveSpeed;
-        v.z = movementVector.z * moveSpeed;
+        v.x += movementVector.x * moveSpeed;
+        v.z += movementVector.z * moveSpeed;
         GetComponent<Rigidbody>().linearVelocity = v;
     }
-
-    
 }
