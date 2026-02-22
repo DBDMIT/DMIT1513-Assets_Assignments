@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody), typeof(Collider))]
-public class HoverNew : MonoBehaviour
+public class Hover : MonoBehaviour
 {
     [Header("Hover Heights")] // WOAH
     public float baseHoverHeight = 1.2f;

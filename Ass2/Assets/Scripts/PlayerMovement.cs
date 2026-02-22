@@ -1,18 +1,25 @@
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public CinemachineOrbitalFollow cameraOrbit;
     public InputAction movementAction;
+
     Transform t;
     public Vector3 movementVector;
-    public float moveSpeed = 1.0f;
+
+    public float moveSpeed;
 
     private void Start()
     {
         movementVector = Vector3.zero;
-        movementAction.Enable();
+        moveSpeed = 5.0f;
+
         t = GetComponent<Transform>();
+
+        movementAction.Enable();
         movementAction.performed += MoveCharacter;
         movementAction.canceled += MoveCharacter;
     }
@@ -25,13 +32,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // transform: holds the player position
-        // movementVector: holds the movement direction
-        //t.position += movementVector * moveSpeed * Time.deltaTime;
-
         Vector3 v = GetComponent<Rigidbody>().linearVelocity;
-        v.x += movementVector.x * moveSpeed;
-        v.z += movementVector.z * moveSpeed;
+
+        Vector3 rotatedMovement = transform.TransformDirection(movementVector);
+
+        v.x = rotatedMovement.x * moveSpeed;
+        v.z = rotatedMovement.z * moveSpeed;
         GetComponent<Rigidbody>().linearVelocity = v;
+
+        transform.rotation = Quaternion.Euler(0, cameraOrbit.HorizontalAxis.Value, 0);
     }
 }

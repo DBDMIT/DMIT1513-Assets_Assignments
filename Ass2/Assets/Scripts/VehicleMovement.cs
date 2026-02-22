@@ -6,7 +6,7 @@ public class VehicleMovement : MonoBehaviour
     public InputAction movementAction;
     public InputAction rotationAction;
 
-    public float moveSpeed = 1.0f;
+    public float moveSpeed = 10.0f;
     public float rotationSpeed = 1.0f;
 
     float movementDirection;
@@ -20,8 +20,8 @@ public class VehicleMovement : MonoBehaviour
 
     Rigidbody rb;
 
-    private const float ACCELERATION_FACTOR = 20f;
-    private const float ROTATION_FACTOR = 40f;
+    private const float ACCELERATION_FACTOR = 15f;
+    private const float ROTATION_FACTOR = 30f;
     void Start()
     {
         movementDirection = 0f;
@@ -41,12 +41,12 @@ public class VehicleMovement : MonoBehaviour
     }
     private void MoveVehicle(InputAction.CallbackContext context)
     {
-        movementDirection = context.ReadValue<float>() * ACCELERATION_FACTOR;
+        movementDirection = context.ReadValue<float>() * moveSpeed;
     }
 
     private void RotateVehicle(InputAction.CallbackContext context)
     {
-        rotationDirection = context.ReadValue<float>() * ROTATION_FACTOR;
+        rotationDirection = context.ReadValue<float>() * rotationSpeed;
     }
 
     private void FixedUpdate()
