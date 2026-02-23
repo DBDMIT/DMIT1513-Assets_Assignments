@@ -4,11 +4,13 @@ using UnityEngine.Events;
 public class CollisionEventHandler : MonoBehaviour
 {
     public string tagTocheck;
+    public CoinManager coinManager;
+    public UnityEvent OnTrigger;
     public UnityEvent OnCollision;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (!collision.gameObject.CompareTag(tagTocheck)) return;
-        OnCollision?.Invoke();
+        if (!other.gameObject.CompareTag(tagTocheck)) return;
+        OnTrigger?.Invoke();
     }
 }

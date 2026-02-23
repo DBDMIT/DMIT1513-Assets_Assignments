@@ -1,8 +1,27 @@
+using System;
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
+using UnityEngine.TextCore.Text;
+using UnityEngine.UI;
 
 public class CoinManager : MonoBehaviour
 {
+    public TextMeshProUGUI coinAmountText;
+    public GameObject coinObjects;
+
     public int coinCount = 0;
+    public int coinGoal = 0;
+
+    private void Start()
+    {
+        for (int i = 0; i < coinObjects.transform.childCount; i++)
+        {
+            coinGoal++;
+        }
+    }
 
     public void IncrementCoin()
     {
@@ -11,9 +30,11 @@ public class CoinManager : MonoBehaviour
 
     public void Update()
     {
-        if (coinCount >= 50)
+        coinAmountText.text = $"{coinCount} / {coinGoal}";
+
+        if (coinCount >= coinGoal)
         {
-            Debug.Log("GAME SHOULD END");
+            SceneManager.LoadScene(0);
         }
     }
 }

@@ -80,7 +80,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3143514054341427816}
   m_Layer: 0
-  m_Name: Bucket
+  m_Name: bucket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

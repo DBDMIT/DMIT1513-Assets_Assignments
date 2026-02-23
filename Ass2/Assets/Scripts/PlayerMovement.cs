@@ -6,16 +6,18 @@ public class PlayerMovement : MonoBehaviour
 {
     public CinemachineOrbitalFollow cameraOrbit;
     public InputAction movementAction;
+    public Transform playerCamera;
 
     Transform t;
     public Vector3 movementVector;
 
-    public float moveSpeed;
+    public float moveSpeed = 1.0f;
+    public float turnSpeed = 1.0f;
+
 
     private void Start()
     {
         movementVector = Vector3.zero;
-        moveSpeed = 5.0f;
 
         t = GetComponent<Transform>();
 
@@ -32,14 +34,31 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Turn();
+
         Vector3 v = GetComponent<Rigidbody>().linearVelocity;
 
-        Vector3 rotatedMovement = transform.TransformDirection(movementVector);
+        Vector3 rotatedMovement = transform.TransformDirection(movementVector) * moveSpeed;
 
-        v.x = rotatedMovement.x * moveSpeed;
-        v.z = rotatedMovement.z * moveSpeed;
+        v.x += rotatedMovement.x;
+        v.z += rotatedMovement.z;
+
         GetComponent<Rigidbody>().linearVelocity = v;
-
-        transform.rotation = Quaternion.Euler(0, cameraOrbit.HorizontalAxis.Value, 0);
     }
+
+    private void Turn()
+    {
+        Vector3 currentLookDirection = cameraOrbit.transform.forward;
+        currentLookDirection.y = 0;
+
+        Quaternion targetRotation = Quaternion.LookRotation(currentLookDirection);
+        transform.rotation = targetRotation;
+    }
+
+    /*public void CharacterPosition()
+    {
+        GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
+
+        transform.position = characterSpawner.position;
+    }*/
 }
