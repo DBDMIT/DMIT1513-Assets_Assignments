@@ -4548,7 +4548,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 17
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -7795,8 +7795,8 @@ HingeJoint:
   m_ExtendedLimits: 0
   m_UseAcceleration: 1
   m_Limits:
-    min: 0
-    max: 45
+    min: -25
+    max: 40
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 5
@@ -7863,7 +7863,7 @@ MonoBehaviour:
       m_Flags: 4
     - m_Name: Negative
       m_Id: ce0c2bcf-8f3e-4cb3-8921-6e4e4e653f3d
-      m_Path: <Keyboard>/downArrow
+      m_Path: <Keyboard>/j
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -7871,7 +7871,7 @@ MonoBehaviour:
       m_Flags: 8
     - m_Name: Positive
       m_Id: a5f572fb-4bc7-4299-8a58-65aebfd31be2
-      m_Path: <Keyboard>/upArrow
+      m_Path: <Keyboard>/u
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -7930,7 +7930,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1060685848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10180,7 +10180,7 @@ MonoBehaviour:
       m_Flags: 4
     - m_Name: Negative
       m_Id: dcdc6fcc-c932-4b17-8916-86015fc2f500
-      m_Path: <Keyboard>/leftArrow
+      m_Path: <Keyboard>/i
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -10188,7 +10188,7 @@ MonoBehaviour:
       m_Flags: 8
     - m_Name: Positive
       m_Id: ddbcea4b-d20a-496a-b9f4-9805ff0358ca
-      m_Path: <Keyboard>/rightArrow
+      m_Path: <Keyboard>/k
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -10230,8 +10230,8 @@ HingeJoint:
   m_ExtendedLimits: 0
   m_UseAcceleration: 0
   m_Limits:
-    min: -51.61548
-    max: 45
+    min: -70
+    max: 60
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 5
@@ -12091,7 +12091,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 17
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -14780,7 +14780,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 6402d31d667f14042b423cdb20c5d37d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.561
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 0
   Mute: 0
