@@ -299,14 +299,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4510541}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
+  m_Script: {fileID: 11500000, guid: eb93cdb6823b03d4e98db1e4bd6153cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
+  m_EditorClassIdentifier: Assembly-CSharp::SpinGameObject
   rotation: {x: 90, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 9
-  rb: {fileID: 0}
 --- !u!1001 &5071696
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -777,14 +773,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8113593}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
+  m_Script: {fileID: 11500000, guid: eb93cdb6823b03d4e98db1e4bd6153cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
+  m_EditorClassIdentifier: Assembly-CSharp::SpinGameObject
   rotation: {x: 90, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 9
-  rb: {fileID: 0}
 --- !u!1 &34370612
 GameObject:
   m_ObjectHideFlags: 0
@@ -965,14 +957,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 34370612}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
+  m_Script: {fileID: 11500000, guid: eb93cdb6823b03d4e98db1e4bd6153cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
+  m_EditorClassIdentifier: Assembly-CSharp::SpinGameObject
   rotation: {x: 90, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 9
-  rb: {fileID: 0}
 --- !u!1 &39698139
 GameObject:
   m_ObjectHideFlags: 0
@@ -1003,7 +991,7 @@ Transform:
   m_GameObject: {fileID: 39698139}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 20.5, y: 11, z: 50}
+  m_LocalPosition: {x: 20, y: 11, z: 50}
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1153,14 +1141,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 39698139}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
+  m_Script: {fileID: 11500000, guid: eb93cdb6823b03d4e98db1e4bd6153cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
+  m_EditorClassIdentifier: Assembly-CSharp::SpinGameObject
   rotation: {x: 90, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 9
-  rb: {fileID: 0}
 --- !u!1 &58485928
 GameObject:
   m_ObjectHideFlags: 0
@@ -1222,10 +1206,12 @@ MonoBehaviour:
 
     Player Hover: Space
 
-    Vehicle Arms: Arrow Keys
+    Vehicle Arms: UJ
 
-    Switch
-    Cams: 1 & 2'
+    Vehicle
+    Bucket: IK
+
+    Switch Cams: 1 & 2'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1484,14 +1470,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 58563511}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
+  m_Script: {fileID: 11500000, guid: eb93cdb6823b03d4e98db1e4bd6153cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
+  m_EditorClassIdentifier: Assembly-CSharp::SpinGameObject
   rotation: {x: 90, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 9
-  rb: {fileID: 0}
 --- !u!1 &64876551
 GameObject:
   m_ObjectHideFlags: 0
@@ -1644,7 +1626,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
-  rotation: {x: 0, y: 0, z: 0}
   maxMoveRange: {x: 25, y: 0, z: 0}
   startingPosition: {x: 25, y: 0, z: 0}
   moveSpeed: 10
@@ -2249,7 +2230,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
-  rotation: {x: 0, y: 0, z: 0}
   maxMoveRange: {x: 0, y: 1, z: 0}
   startingPosition: {x: 0, y: 0, z: 0}
   moveSpeed: 2
@@ -2665,14 +2645,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 198509067}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
+  m_Script: {fileID: 11500000, guid: eb93cdb6823b03d4e98db1e4bd6153cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
+  m_EditorClassIdentifier: Assembly-CSharp::SpinGameObject
   rotation: {x: 90, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 9
-  rb: {fileID: 0}
 --- !u!1 &202147787
 GameObject:
   m_ObjectHideFlags: 0
@@ -3067,14 +3043,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 220449652}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
+  m_Script: {fileID: 11500000, guid: eb93cdb6823b03d4e98db1e4bd6153cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
+  m_EditorClassIdentifier: Assembly-CSharp::SpinGameObject
   rotation: {x: 90, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 9
-  rb: {fileID: 0}
 --- !u!4 &239383314 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3143514054341427816, guid: 2c9686d636dc73c4fbecb917d8f744ff, type: 3}
@@ -3260,14 +3232,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 245765264}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
+  m_Script: {fileID: 11500000, guid: eb93cdb6823b03d4e98db1e4bd6153cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
+  m_EditorClassIdentifier: Assembly-CSharp::SpinGameObject
   rotation: {x: 90, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 9
-  rb: {fileID: 0}
 --- !u!1 &324521634
 GameObject:
   m_ObjectHideFlags: 0
@@ -3316,7 +3284,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
-  rotation: {x: 0, y: 0, z: 0}
   maxMoveRange: {x: 25, y: 0, z: 0}
   startingPosition: {x: 63.5, y: 0, z: 0}
   moveSpeed: 15
@@ -3605,14 +3572,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 339903852}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
+  m_Script: {fileID: 11500000, guid: eb93cdb6823b03d4e98db1e4bd6153cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
+  m_EditorClassIdentifier: Assembly-CSharp::SpinGameObject
   rotation: {x: 90, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 9
-  rb: {fileID: 0}
 --- !u!1 &351236901
 GameObject:
   m_ObjectHideFlags: 0
@@ -3643,7 +3606,7 @@ Transform:
   m_GameObject: {fileID: 351236901}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 11.5, y: 11, z: 50}
+  m_LocalPosition: {x: 11, y: 11, z: 50}
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3793,14 +3756,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 351236901}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
+  m_Script: {fileID: 11500000, guid: eb93cdb6823b03d4e98db1e4bd6153cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
+  m_EditorClassIdentifier: Assembly-CSharp::SpinGameObject
   rotation: {x: 90, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 9
-  rb: {fileID: 0}
 --- !u!1 &357651386
 GameObject:
   m_ObjectHideFlags: 0
@@ -3967,7 +3926,7 @@ Transform:
   m_GameObject: {fileID: 379676532}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 17.5, y: 11, z: 50}
+  m_LocalPosition: {x: 17, y: 11, z: 50}
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4117,14 +4076,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 379676532}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
+  m_Script: {fileID: 11500000, guid: eb93cdb6823b03d4e98db1e4bd6153cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
+  m_EditorClassIdentifier: Assembly-CSharp::SpinGameObject
   rotation: {x: 90, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 9
-  rb: {fileID: 0}
 --- !u!1 &447618496
 GameObject:
   m_ObjectHideFlags: 0
@@ -4305,14 +4260,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 447618496}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
+  m_Script: {fileID: 11500000, guid: eb93cdb6823b03d4e98db1e4bd6153cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
+  m_EditorClassIdentifier: Assembly-CSharp::SpinGameObject
   rotation: {x: 90, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 9
-  rb: {fileID: 0}
 --- !u!1 &478865481
 GameObject:
   m_ObjectHideFlags: 0
@@ -4361,7 +4312,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
-  rotation: {x: 0, y: 0, z: 0}
   maxMoveRange: {x: 0, y: 1, z: 0}
   startingPosition: {x: 0, y: 0, z: 0}
   moveSpeed: 2
@@ -4865,14 +4815,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 494698501}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
+  m_Script: {fileID: 11500000, guid: eb93cdb6823b03d4e98db1e4bd6153cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
+  m_EditorClassIdentifier: Assembly-CSharp::SpinGameObject
   rotation: {x: 90, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 9
-  rb: {fileID: 0}
 --- !u!1 &513712535
 GameObject:
   m_ObjectHideFlags: 0
@@ -5199,14 +5145,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 577752599}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
+  m_Script: {fileID: 11500000, guid: eb93cdb6823b03d4e98db1e4bd6153cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
+  m_EditorClassIdentifier: Assembly-CSharp::SpinGameObject
   rotation: {x: 90, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 9
-  rb: {fileID: 0}
 --- !u!1 &601201955
 GameObject:
   m_ObjectHideFlags: 0
@@ -5523,14 +5465,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 619961344}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
+  m_Script: {fileID: 11500000, guid: eb93cdb6823b03d4e98db1e4bd6153cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
+  m_EditorClassIdentifier: Assembly-CSharp::SpinGameObject
   rotation: {x: 90, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 9
-  rb: {fileID: 0}
 --- !u!1 &651495690
 GameObject:
   m_ObjectHideFlags: 0
@@ -5607,7 +5545,7 @@ Transform:
   m_GameObject: {fileID: 651780478}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 14.5, y: 11, z: 50}
+  m_LocalPosition: {x: 14, y: 11, z: 50}
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5757,14 +5695,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 651780478}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
+  m_Script: {fileID: 11500000, guid: eb93cdb6823b03d4e98db1e4bd6153cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
+  m_EditorClassIdentifier: Assembly-CSharp::SpinGameObject
   rotation: {x: 90, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 9
-  rb: {fileID: 0}
 --- !u!1 &683024790
 GameObject:
   m_ObjectHideFlags: 0
@@ -6214,14 +6148,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 720864835}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
+  m_Script: {fileID: 11500000, guid: eb93cdb6823b03d4e98db1e4bd6153cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
+  m_EditorClassIdentifier: Assembly-CSharp::SpinGameObject
   rotation: {x: 90, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 9
-  rb: {fileID: 0}
 --- !u!1 &721510088
 GameObject:
   m_ObjectHideFlags: 0
@@ -6402,14 +6332,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 721510088}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
+  m_Script: {fileID: 11500000, guid: eb93cdb6823b03d4e98db1e4bd6153cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
+  m_EditorClassIdentifier: Assembly-CSharp::SpinGameObject
   rotation: {x: 90, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 9
-  rb: {fileID: 0}
 --- !u!1 &724773740
 GameObject:
   m_ObjectHideFlags: 0
@@ -6701,14 +6627,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 729790597}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
+  m_Script: {fileID: 11500000, guid: eb93cdb6823b03d4e98db1e4bd6153cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
+  m_EditorClassIdentifier: Assembly-CSharp::SpinGameObject
   rotation: {x: 90, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 9
-  rb: {fileID: 0}
 --- !u!1 &735639317
 GameObject:
   m_ObjectHideFlags: 0
@@ -6889,14 +6811,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 735639317}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
+  m_Script: {fileID: 11500000, guid: eb93cdb6823b03d4e98db1e4bd6153cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
+  m_EditorClassIdentifier: Assembly-CSharp::SpinGameObject
   rotation: {x: 90, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 9
-  rb: {fileID: 0}
 --- !u!1 &752398021
 GameObject:
   m_ObjectHideFlags: 0
@@ -7077,14 +6995,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 752398021}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
+  m_Script: {fileID: 11500000, guid: eb93cdb6823b03d4e98db1e4bd6153cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
+  m_EditorClassIdentifier: Assembly-CSharp::SpinGameObject
   rotation: {x: 90, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 9
-  rb: {fileID: 0}
 --- !u!1 &804068019
 GameObject:
   m_ObjectHideFlags: 0
@@ -7401,14 +7315,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 847641859}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
+  m_Script: {fileID: 11500000, guid: eb93cdb6823b03d4e98db1e4bd6153cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
+  m_EditorClassIdentifier: Assembly-CSharp::SpinGameObject
   rotation: {x: 90, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 9
-  rb: {fileID: 0}
 --- !u!1 &910615512
 GameObject:
   m_ObjectHideFlags: 0
@@ -7457,7 +7367,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
-  rotation: {x: 90, y: 45, z: 45}
   maxMoveRange: {x: 0, y: 5, z: 0}
   startingPosition: {x: 0, y: 0, z: 0}
   moveSpeed: 5
@@ -7942,7 +7851,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1060685848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8220,14 +8129,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1109943632}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
+  m_Script: {fileID: 11500000, guid: eb93cdb6823b03d4e98db1e4bd6153cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
+  m_EditorClassIdentifier: Assembly-CSharp::SpinGameObject
   rotation: {x: 90, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 9
-  rb: {fileID: 0}
 --- !u!1 &1135891965
 GameObject:
   m_ObjectHideFlags: 0
@@ -8408,14 +8313,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1135891965}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
+  m_Script: {fileID: 11500000, guid: eb93cdb6823b03d4e98db1e4bd6153cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
+  m_EditorClassIdentifier: Assembly-CSharp::SpinGameObject
   rotation: {x: 90, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 9
-  rb: {fileID: 0}
 --- !u!1 &1160036808
 GameObject:
   m_ObjectHideFlags: 0
@@ -8769,7 +8670,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
-  rotation: {x: 0, y: 0, z: 0}
   maxMoveRange: {x: 25, y: 0, z: 0}
   startingPosition: {x: 63.5, y: 0, z: 0}
   moveSpeed: 10
@@ -8926,7 +8826,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
-  rotation: {x: 90, y: 25, z: 30}
   maxMoveRange: {x: 0, y: 5, z: 0}
   startingPosition: {x: 0, y: 0, z: 0}
   moveSpeed: 5
@@ -9115,7 +9014,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
-  rotation: {x: 0, y: 0, z: 0}
   maxMoveRange: {x: 25, y: 0, z: 0}
   startingPosition: {x: -25, y: 0, z: 0}
   moveSpeed: 15
@@ -9580,7 +9478,6 @@ GameObject:
   - component: {fileID: 1487936070}
   - component: {fileID: 1487936069}
   - component: {fileID: 1487936073}
-  - component: {fileID: 1487936074}
   m_Layer: 0
   m_Name: coin
   m_TagString: Untagged
@@ -9747,31 +9644,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1487936066}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
+  m_Script: {fileID: 11500000, guid: eb93cdb6823b03d4e98db1e4bd6153cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
+  m_EditorClassIdentifier: Assembly-CSharp::SpinGameObject
   rotation: {x: 90, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 9
-  rb: {fileID: 0}
---- !u!114 &1487936074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1487936066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
-  rotation: {x: 0, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 0
-  rb: {fileID: 0}
 --- !u!1 &1518973376
 GameObject:
   m_ObjectHideFlags: 0
@@ -10695,7 +10571,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
-  rotation: {x: 0, y: 0, z: 0}
   maxMoveRange: {x: 0, y: 1, z: 0}
   startingPosition: {x: 0, y: 0, z: 0}
   moveSpeed: 2
@@ -11095,14 +10970,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1720104821}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
+  m_Script: {fileID: 11500000, guid: eb93cdb6823b03d4e98db1e4bd6153cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
+  m_EditorClassIdentifier: Assembly-CSharp::SpinGameObject
   rotation: {x: 90, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 9
-  rb: {fileID: 0}
 --- !u!1 &1772522563
 GameObject:
   m_ObjectHideFlags: 0
@@ -11151,7 +11022,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
-  rotation: {x: 75, y: 25, z: 45}
   maxMoveRange: {x: 0, y: 5, z: 0}
   startingPosition: {x: 0, y: 0, z: 0}
   moveSpeed: 5
@@ -11518,14 +11388,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1831475033}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
+  m_Script: {fileID: 11500000, guid: eb93cdb6823b03d4e98db1e4bd6153cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
+  m_EditorClassIdentifier: Assembly-CSharp::SpinGameObject
   rotation: {x: 90, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 9
-  rb: {fileID: 0}
 --- !u!1 &1837888663
 GameObject:
   m_ObjectHideFlags: 0
@@ -11817,14 +11683,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1841599470}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
+  m_Script: {fileID: 11500000, guid: eb93cdb6823b03d4e98db1e4bd6153cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
+  m_EditorClassIdentifier: Assembly-CSharp::SpinGameObject
   rotation: {x: 90, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 9
-  rb: {fileID: 0}
 --- !u!1 &1848537675
 GameObject:
   m_ObjectHideFlags: 0
@@ -12005,14 +11867,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1848537675}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
+  m_Script: {fileID: 11500000, guid: eb93cdb6823b03d4e98db1e4bd6153cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
+  m_EditorClassIdentifier: Assembly-CSharp::SpinGameObject
   rotation: {x: 90, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 9
-  rb: {fileID: 0}
 --- !u!1 &1866306331
 GameObject:
   m_ObjectHideFlags: 0
@@ -12329,14 +12187,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1887843865}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
+  m_Script: {fileID: 11500000, guid: eb93cdb6823b03d4e98db1e4bd6153cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
+  m_EditorClassIdentifier: Assembly-CSharp::SpinGameObject
   rotation: {x: 90, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 9
-  rb: {fileID: 0}
 --- !u!1 &1894398127
 GameObject:
   m_ObjectHideFlags: 0
@@ -12628,14 +12482,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1916292631}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
+  m_Script: {fileID: 11500000, guid: eb93cdb6823b03d4e98db1e4bd6153cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
+  m_EditorClassIdentifier: Assembly-CSharp::SpinGameObject
   rotation: {x: 90, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 9
-  rb: {fileID: 0}
 --- !u!1 &1935159916
 GameObject:
   m_ObjectHideFlags: 0
@@ -12894,14 +12744,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1957998584}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
+  m_Script: {fileID: 11500000, guid: eb93cdb6823b03d4e98db1e4bd6153cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
+  m_EditorClassIdentifier: Assembly-CSharp::SpinGameObject
   rotation: {x: 90, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 9
-  rb: {fileID: 0}
 --- !u!1 &1970980221
 GameObject:
   m_ObjectHideFlags: 0
@@ -13457,7 +13303,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
-  rotation: {x: 35, y: 35, z: 90}
   maxMoveRange: {x: 0, y: 5, z: 0}
   startingPosition: {x: 0, y: 0, z: 0}
   moveSpeed: 5
@@ -13841,8 +13686,8 @@ Transform:
   m_GameObject: {fileID: 2141163581}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.000004887582, y: -127.4, z: 102.99997}
-  m_LocalScale: {x: 262.99072, y: 227.68195, z: 345.28818}
+  m_LocalPosition: {x: 0.000004887582, y: -18.5903, z: 102.99997}
+  m_LocalScale: {x: 262.99072, y: 10.063541, z: 345.28818}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1485640498}
@@ -14184,14 +14029,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2144082919}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6999529d1089cc04ab1dcc2c2a0c436a, type: 3}
+  m_Script: {fileID: 11500000, guid: eb93cdb6823b03d4e98db1e4bd6153cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovingGameObject
-  rotation: {x: 90, y: 0, z: 0}
-  maxMoveRange: {x: 0, y: 0, z: 0}
-  startingPosition: {x: 0, y: 0, z: 0}
-  moveSpeed: 9
-  rb: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::SpinGameObject
+  rotation: {x: 90, y: 90, z: 0}
 --- !u!114 &28017955128345810
 MonoBehaviour:
   m_ObjectHideFlags: 0

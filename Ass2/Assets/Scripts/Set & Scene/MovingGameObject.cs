@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class MovingGameObject : MonoBehaviour
 {
-    public Vector3 rotation;
-
     public Vector3 maxMoveRange;
     public Vector3 startingPosition;
     public float moveSpeed;
@@ -19,12 +17,6 @@ public class MovingGameObject : MonoBehaviour
     }
 
     public void Update()
-    {
-        Move();
-        Spin();
-    }
-
-    private void Move()
     {
         Vector3 nextPosition = transform.position + moveDirection * moveSpeed * Time.deltaTime;
         Vector3 offset = nextPosition - startingPosition;
@@ -45,10 +37,5 @@ public class MovingGameObject : MonoBehaviour
         {
             transform.position = nextPosition;
         }
-    }
-
-    private void Spin() // TODO: fix. doesn't work with Move(); function!!
-    {
-        transform.Rotate(rotation * 1 * Time.deltaTime);
     }
 }
