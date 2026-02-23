@@ -19,10 +19,9 @@ public class UI : MonoBehaviour
 
     public void Update()
     {
-        if (coinManager.coinCount == coinManager.coinGoal)
+        if (coinManager.goalComplete)
         {
             UIText.text = "You won! Play again please.";
-            SceneManager.LoadScene(0);
         }
     }
 

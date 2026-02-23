@@ -14,9 +14,12 @@ public class CoinManager : MonoBehaviour
 
     public int coinCount = 0;
     public int coinGoal = 0;
+    public bool goalComplete = false;
 
     private void Start()
     {
+        goalComplete = false;
+
         for (int i = 0; i < coinObjects.transform.childCount; i++)
         {
             coinGoal++;
@@ -34,6 +37,7 @@ public class CoinManager : MonoBehaviour
 
         if (coinCount >= coinGoal)
         {
+            goalComplete = true;
             SceneManager.LoadScene(0);
         }
     }
