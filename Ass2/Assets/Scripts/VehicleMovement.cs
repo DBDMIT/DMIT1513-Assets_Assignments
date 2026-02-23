@@ -28,9 +28,6 @@ public class VehicleMovement : MonoBehaviour
         rotationDirection = 0f;
         rb = GetComponent<Rigidbody>();
 
-        // velocity = rate of movement
-        // acceleration = rate of increase of velocity
-
         movementAction.Enable();
         movementAction.performed += MoveVehicle;
         movementAction.canceled += MoveVehicle;
@@ -56,8 +53,6 @@ public class VehicleMovement : MonoBehaviour
 
         rb.AddForce(transform.forward * movementDirection, ForceMode.Acceleration);
         rb.AddTorque(Vector3.up * rotationDirection, ForceMode.Acceleration);
-        //armRb.AddTorque()
-        //bucketRB.AddTorque()
 
         if (currentLinearSpeed > maxLinearSpeed)
         {

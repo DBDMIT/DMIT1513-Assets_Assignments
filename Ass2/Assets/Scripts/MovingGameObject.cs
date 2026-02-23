@@ -29,7 +29,7 @@ public class MovingGameObject : MonoBehaviour
         Vector3 nextPosition = transform.position + moveDirection * moveSpeed * Time.deltaTime;
         Vector3 offset = nextPosition - startingPosition;
 
-        if (Mathf.Abs(offset.x) > maxMoveRange.x || // .Abs gives you the scale of the number, not the value (-10 becomes just 10).
+        if (Mathf.Abs(offset.x) > maxMoveRange.x ||
             Mathf.Abs(offset.y) > maxMoveRange.y ||
             Mathf.Abs(offset.z) > maxMoveRange.z)
         {

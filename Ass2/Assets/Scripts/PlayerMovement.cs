@@ -54,11 +54,4 @@ public class PlayerMovement : MonoBehaviour
         Quaternion targetRotation = Quaternion.LookRotation(currentLookDirection);
         transform.rotation = targetRotation;
     }
-
-    /*public void CharacterPosition()
-    {
-        GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
-
-        transform.position = characterSpawner.position;
-    }*/
 }
