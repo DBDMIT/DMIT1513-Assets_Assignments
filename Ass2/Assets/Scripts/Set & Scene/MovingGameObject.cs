@@ -6,7 +6,7 @@ public class MovingGameObject : MonoBehaviour
     public Vector3 startingPosition;
     public float moveSpeed;
     private Vector3 moveDirection = Vector3.right;
-    public Rigidbody? rb;
+    public Rigidbody rb;
 
     public void Start()
     {
