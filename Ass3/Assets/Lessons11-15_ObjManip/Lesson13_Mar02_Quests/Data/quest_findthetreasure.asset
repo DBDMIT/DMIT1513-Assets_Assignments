@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29511db12b506b74e91eca6e9aff22be, type: 3}
+  m_Name: quest_findthetreasure
+  m_EditorClassIdentifier: Assembly-CSharp::QuestSO
+  questName: Find the Awesome
+  goals:
+  - {fileID: 11400000, guid: ec0c4d63687868743873018cc245a2a7, type: 2}
+  - {fileID: 11400000, guid: 02b09f25968eb854fba6ae6e9cc2013b, type: 2}
+  - {fileID: 11400000, guid: da0b49c7106d41a428dfcaa5a1d99999, type: 2}
+  - {fileID: 11400000, guid: f540f345fb55e03428d1d36e24c38752, type: 2}
+  initialGoalID: 0
