@@ -23,7 +23,8 @@ public class goal_data
         isActive = false;
         goalID = config.goalID;
         nextGoalID = config.nextGoalID;
-
+        goalName = config.goalName;
+        
         foreach (requirement_so req in config.requirements)
         {
             requirement_data tmp = req.CreateRuntimeData();
@@ -43,7 +44,7 @@ public class goal_data
     public void ActivateGoal()
     {
         isActive = true;
-        onGoalComplete ?.Invoke(this);
+        onGoalUpdated?.Invoke(this);
     }
 
     public void HandleRequirementChange(requirement_data req)

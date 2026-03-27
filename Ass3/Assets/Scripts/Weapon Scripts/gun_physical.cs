@@ -26,7 +26,7 @@ public class gun_physical : gun
             p.ApplyProjectileForce();
             p.OnHit += ProjectileHit;
 
-            GetComponent<AudioSource>().PlayOneShot(fireSfx);
+            GetComponent<AudioSource>().PlayOneShot(fireSFX);
             canFire = false;
             StartCoroutine(FireDelay());
         }

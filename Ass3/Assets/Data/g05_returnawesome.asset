@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a88270380e3d1f24dad0022480944722, type: 3}
+  m_Name: g05_returnawesome
+  m_EditorClassIdentifier: Assembly-CSharp::goal_so
+  requirements:
+  - {fileID: 11400000, guid: cc0f20a2b4fe3e546b476e52a546ab36, type: 2}
+  goalName: Return the Awesome to Mr. Pill
+  goalID: 4
+  nextGoalID: -1

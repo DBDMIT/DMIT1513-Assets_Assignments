@@ -22,7 +22,10 @@ public class quest_manager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         InitializeQuestLibrary();
     }
-
+    private void Start()
+    {
+        ActivateQuest(quests[0]);
+    }
     public void InitializeQuestLibrary()
     {
         foreach(quest_so q in quests)
@@ -43,6 +46,7 @@ public class quest_manager : MonoBehaviour
     public void CompleteQuest(quest_data questData)
     {
         questLibrary[questData.Config].isComplete = true;
+        onQuestUpdate?.Invoke(questData);
     }
 
     public void ActivateQuest(quest_so quest)

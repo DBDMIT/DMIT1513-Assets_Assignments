@@ -8,7 +8,7 @@ public abstract class gun : MonoBehaviour
     public float fireRate;
     public float dmg;
     public Transform bulletSpawnLocation;
-    public AudioClip fireSfx;
+    public AudioClip fireSFX;
     public GameObject hitFX;
 
     public abstract void Reload();

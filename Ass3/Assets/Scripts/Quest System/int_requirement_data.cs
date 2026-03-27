@@ -9,7 +9,7 @@ public class int_requirement_data : requirement_data
     {
         Config = Config_;
         currentValue = Config_.defaultValue;
-        targetValue = Config_.defaultValue;
+        targetValue = Config_.targetValue;
     }
 
     public override bool IsMet()
@@ -25,7 +25,7 @@ public class int_requirement_data : requirement_data
 
     public void Increment(int amt)
     {
-        currentValue = amt;
+        currentValue += amt;
         RaiseRequirementChanged();
     }
 }
