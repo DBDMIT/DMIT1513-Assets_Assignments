@@ -3,11 +3,11 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-public class PauseMenuController : MonoBehaviour
+public class controller_pausemenu : MonoBehaviour
 {
     public InputAction pauseInput;
     public GameObject pauseMenuUI;
-    public static PauseMenuController instance;
+    public static controller_pausemenu instance;
     private bool isPaused = false;
     public event Action<bool> OnPauseToggle;
     private void Start()

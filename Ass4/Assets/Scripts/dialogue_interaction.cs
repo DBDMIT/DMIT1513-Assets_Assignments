@@ -13,17 +13,9 @@ public class dialogue_interaction : MonoBehaviour
 
     public bool talkedTo = false;
 
-    private shooter_player_movement playerMovement;
-    private Animator animator;
+    private controller_playermovement playerMovement;
     private float initialSpeed;
     private float initialJumpForce;
-
-    private GameObject secondPanel;
-
-    private void Awake()
-    {
-        secondPanel = dialogBox.transform.GetChild(1).gameObject;
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -32,12 +24,9 @@ public class dialogue_interaction : MonoBehaviour
             return;
         }
 
-        secondPanel.SetActive(true);
-
-        playerMovement = other.GetComponent<shooter_player_movement>();
-        animator = other.GetComponent<Animator>();
-        initialSpeed = playerMovement.movementSpeed;
-        initialJumpForce = playerMovement.jumpForce;
+        //playerMovement = other.GetComponent<shooter_player_movement>();
+        //initialSpeed = playerMovement.movementSpeed;
+        //initialJumpForce = playerMovement.jumpForce;
 
         if (!talkedTo)
         {
@@ -80,23 +69,16 @@ public class dialogue_interaction : MonoBehaviour
     {
         if (playerMovement != null)
         {
-            playerMovement.movementSpeed = initialSpeed;
-            playerMovement.jumpForce = initialJumpForce;
-            animator.enabled = true;
+            //playerMovement.movementSpeed = initialSpeed;
+            //playerMovement.jumpForce = initialJumpForce;
         }
     }
     public void DisableMovement()
     {
         if (playerMovement != null)
         {
-            playerMovement.movementSpeed = 0;
-            playerMovement.jumpForce = 0;
-            animator.enabled = false;
+            //playerMovement.movementSpeed = 0;
+            //playerMovement.jumpForce = 0;
         }
-    }
-
-    public void DisableInstructions()
-    {
-        secondPanel.SetActive(false);
     }
 }
