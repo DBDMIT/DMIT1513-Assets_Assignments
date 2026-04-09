@@ -38,6 +38,11 @@ public class controller_pausemenu : MonoBehaviour
         
     }
 
+    public void Play()
+    {
+        SceneManager.LoadScene(1);
+    }
+
     public void Resume()
     {
         Time.timeScale = 1.0f;

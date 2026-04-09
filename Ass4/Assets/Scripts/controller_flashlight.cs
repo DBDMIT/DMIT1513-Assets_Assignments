@@ -3,11 +3,11 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-public class FlashlightController : MonoBehaviour
+public class controller_flashlight : MonoBehaviour
 {
     public InputAction toggleFlashlight;
     public Light flashlight;
-    private float batteryLevel = 1.0f;
+    private float batteryLevel = 10.0f;
     public float usageRate = 0.1f;
     public float chargeRate = 0.2f;
     public Slider batteryGauge;
@@ -18,7 +18,6 @@ public class FlashlightController : MonoBehaviour
         toggleFlashlight.performed += ToggleFlashlight;
         StartCoroutine(BatteryPercentageCoroutine());
         controller_pausemenu.instance.OnPauseToggle += ToggleInput;
-
     }
 
     private void ToggleInput(bool pauseState_)
@@ -56,7 +55,7 @@ public class FlashlightController : MonoBehaviour
                 // charge the battery
             }
 
-            batteryLevel = Mathf.Clamp(batteryLevel, 0f, 1f);
+            batteryLevel = Mathf.Clamp(batteryLevel, 0f, 10f);
             if (batteryLevel <= 0)
             {
                 flashlight.enabled = false;
