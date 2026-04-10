@@ -1585,7 +1585,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &230601265
 Transform:
   m_ObjectHideFlags: 0
@@ -4989,7 +4989,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -461.23}
+  m_AnchoredPosition: {x: 0, y: 469}
   m_SizeDelta: {x: -1346.9414, y: -982.7285}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &817459045
@@ -6503,6 +6503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be5151fbd7bce7d4891088b4cef61438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::screen_interaction
+  screenSwitch: {fileID: 1583012434}
   screenInput:
     m_Name: Screen Input
     m_Type: 0
@@ -10542,6 +10543,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7240fb9af98e9f94e994e8ec7a6aac4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::screen_switch
+  cameras:
+  - {fileID: 23155696482694343}
+  - {fileID: 8510894023100054491}
+  - {fileID: 230601264}
+  activeCamera: 0
 --- !u!1 &1612680251
 GameObject:
   m_ObjectHideFlags: 0

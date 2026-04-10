@@ -6,8 +6,9 @@ using UnityEngine.UI;
 
 public class screen_interaction : MonoBehaviour
 {
+    public screen_switch screenSwitch;
     public InputAction screenInput;
-    bool isActive = false;
+    interface bool isActive = false;
 
     private void Start()
     {
@@ -19,7 +20,7 @@ public class screen_interaction : MonoBehaviour
     {
         if (isActive)
         {
-            Debug.Log("Screen should switch now");
+            screenSwitch.Switch();
         }
     }
 
