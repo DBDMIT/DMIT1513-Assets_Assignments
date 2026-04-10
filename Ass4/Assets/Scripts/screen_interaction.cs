@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.Events;
+
 
 public class screen_interaction : MonoBehaviour
 {
     public screen_switch screenSwitch;
     public InputAction screenInput;
-    interface bool isActive = false;
+    public UnityEvent onSwitch;
+    internal bool isActive = false;
 
     private void Start()
     {
@@ -21,6 +24,7 @@ public class screen_interaction : MonoBehaviour
         if (isActive)
         {
             screenSwitch.Switch();
+            onSwitch?.Invoke();
         }
     }
 

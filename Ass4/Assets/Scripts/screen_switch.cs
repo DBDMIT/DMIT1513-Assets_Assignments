@@ -1,9 +1,15 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class screen_switch : MonoBehaviour
 {
+    public UnityEvent OnCamera;
     public List<GameObject> cameras = new List<GameObject>();
+    public GameObject blackCamera;
     public int activeCamera;
 
     public void Switch()
@@ -27,6 +33,9 @@ public class screen_switch : MonoBehaviour
 
     private void Update()
     {
-        //if();
+        if (activeCamera == cameras.Count - 1)
+        {
+            OnCamera?.Invoke();
+        }
     }
 }
