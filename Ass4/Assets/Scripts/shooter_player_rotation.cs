@@ -7,7 +7,9 @@ public class shooter_player_rotation : MonoBehaviour
     public float sensitivity = 0.1f;
     private float yaw, pitch;
     public float maxPitch;
-    public Transform spine;
+    public Transform spineX;
+    public Transform spineY;
+
 
     private void Start()
     {
@@ -19,23 +21,14 @@ public class shooter_player_rotation : MonoBehaviour
     {
         Vector2 mouseDelta = c.ReadValue<Vector2>();
 
-        yaw += mouseDelta.x * sensitivity;
-        pitch -= mouseDelta.y * sensitivity;
+        yaw += mouseDelta.x * sensitivity * Time.deltaTime;
+        pitch -= mouseDelta.y * sensitivity * Time.deltaTime;
     }
 
-    public void LateUpdate()
+    public void Update()
     {
         pitch = Mathf.Clamp(pitch, -maxPitch, maxPitch);
-        if (GetComponent<camera_controller>().currentState == CameraState.FIRST_PERSON)
-        {
-            //Quaternion rotationOffset = Quaternion.Euler(pitch, yaw, 0);
-            transform.rotation = Quaternion.Euler(pitch, yaw, 0);
-            // spine.rotation = Quaternion.Euler(pitch, yaw, 0);
-        }
-        else
-        {
-            transform.rotation = Quaternion.Euler(0, yaw, 0);
-            spine.rotation = Quaternion.Euler(pitch, yaw, 0);
-        }
+        spineY.localRotation = Quaternion.Euler(pitch, 0, 0);
+        spineX.localRotation = Quaternion.Euler(0, yaw, 0);
     }
 }

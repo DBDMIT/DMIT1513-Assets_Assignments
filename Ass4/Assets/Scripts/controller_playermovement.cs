@@ -1,36 +1,34 @@
+using TMPro.Examples;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class controller_playermovement : MonoBehaviour
 {
-    public InputAction movementAction;
-    Transform t;
-    Vector3 movementVector;
-    public float moveSpeed = 1.0f;
+    public InputAction movementInput;
+    private Vector2 moveVector;
+    private Rigidbody rb;
+    public float movementSpeed;
 
-    private void Start()
+    private void Awake()
     {
-        movementVector = Vector3.zero;
-        movementAction.Enable();
-        t = GetComponent<Transform>();
-        movementAction.performed += MoveCharacter;
-        movementAction.canceled += MoveCharacter;
+        movementInput.Enable();
+        movementInput.performed += ReadMoveInput;
+        movementInput.canceled += ReadMoveInput;
+
+        rb = GetComponent<Rigidbody>();
     }
 
-    private void MoveCharacter(InputAction.CallbackContext context)
+    private void ReadMoveInput(InputAction.CallbackContext context)
     {
-        var tmp = context.ReadValue<Vector2>();
-        movementVector = new Vector3(tmp.x, 0, tmp.y);
+        moveVector = context.ReadValue<Vector2>();
     }
 
     private void FixedUpdate()
     {
-        // transform: holds the player position
-        // movementVector: holds the movement direction
-        //t.position += movementVector * moveSpeed * Time.deltaTime;
-        Vector3 v = GetComponent<Rigidbody>().linearVelocity;
-        v.x = movementVector.x * moveSpeed;
-        v.z = movementVector.z * moveSpeed;
-        GetComponent<Rigidbody>().linearVelocity = v;
+        Vector3 moveDirection = (transform.forward * moveVector.y) + (transform.right * moveVector.x);
+
+        Vector3 deltaMovement = moveDirection * movementSpeed * Time.deltaTime;
+
+        rb.Move(transform.position + deltaMovement, transform.rotation);
     }
 }
