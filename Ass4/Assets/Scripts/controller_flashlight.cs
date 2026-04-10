@@ -17,7 +17,7 @@ public class controller_flashlight : MonoBehaviour
         toggleFlashlight.Enable();
         toggleFlashlight.performed += ToggleFlashlight;
         StartCoroutine(BatteryPercentageCoroutine());
-        controller_pausemenu.instance.OnPauseToggle += ToggleInput;
+        //controller_pausemenu.instance.OnPauseToggle += ToggleInput;
     }
 
     private void ToggleInput(bool pauseState_)

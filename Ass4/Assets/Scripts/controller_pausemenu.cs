@@ -7,6 +7,8 @@ public class controller_pausemenu : MonoBehaviour
 {
     public InputAction pauseInput;
     public GameObject pauseMenuUI;
+    public GameObject controlsMenuUI;
+
     public static controller_pausemenu instance;
     private bool isPaused = false;
     public event Action<bool> OnPauseToggle;
@@ -35,7 +37,6 @@ public class controller_pausemenu : MonoBehaviour
         isPaused = true;
         Cursor.lockState = CursorLockMode.None;
         OnPauseToggle?.Invoke(isPaused);
-        
     }
 
     public void Play()
@@ -51,7 +52,6 @@ public class controller_pausemenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         isPaused = false;
         OnPauseToggle?.Invoke(isPaused);
-
     }
 
     public void ReturnToMenu()

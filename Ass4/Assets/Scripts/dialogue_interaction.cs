@@ -24,9 +24,9 @@ public class dialogue_interaction : MonoBehaviour
             return;
         }
 
-        //playerMovement = other.GetComponent<shooter_player_movement>();
-        //initialSpeed = playerMovement.movementSpeed;
-        //initialJumpForce = playerMovement.jumpForce;
+        playerMovement = other.GetComponent<controller_playermovement>();
+        initialSpeed = playerMovement.movementSpeed;
+        initialJumpForce = playerMovement.jumpForce;
 
         if (!talkedTo)
         {
@@ -69,16 +69,16 @@ public class dialogue_interaction : MonoBehaviour
     {
         if (playerMovement != null)
         {
-            //playerMovement.movementSpeed = initialSpeed;
-            //playerMovement.jumpForce = initialJumpForce;
+            playerMovement.movementSpeed = initialSpeed;
+            playerMovement.jumpForce = initialJumpForce;
         }
     }
     public void DisableMovement()
     {
         if (playerMovement != null)
         {
-            //playerMovement.movementSpeed = 0;
-            //playerMovement.jumpForce = 0;
+            playerMovement.movementSpeed = 0;
+            playerMovement.jumpForce = 0;
         }
     }
 }
