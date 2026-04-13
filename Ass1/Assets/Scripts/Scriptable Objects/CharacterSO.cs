@@ -14,14 +14,14 @@ public class CharacterSO : ScriptableObject
 public enum WeaponType
 {
     Sword,
-    Staff,
-    Bomb
+    Wand,
+    Wrench
 }
 
 public enum Skin
 {
     Default,
-    Witch,
-    Wizard,
-    Bikini    
+    MrPill,
+    GasMask,
+    Phillip    
 }
