@@ -8,6 +8,11 @@ public class CharacterSpawner : MonoBehaviour
     public List<Material> materials = new List<Material>();
     public int skinIndexHelper = 0;
 
+    public void Start()
+    {
+        SpawnCharacter();
+    }
+
     public void SpawnCharacter()
     {
         GameObject characterPrefab = CharacterSelectSingleton.Instance.GetCharacter().prefab;
@@ -15,12 +20,17 @@ public class CharacterSpawner : MonoBehaviour
 
         MeshRenderer mr = tmp.GetComponent<MeshRenderer>();
 
-        if (characterPrefab.gameObject.name == "Player_Wizard")
+        if (characterPrefab.gameObject.name == "Player_Staff")
+        {
+            skinIndexHelper = 0;
+        }
+
+        if (characterPrefab.gameObject.name == "Player_Sword")
         {
             skinIndexHelper = 4;
         }
 
-        if (characterPrefab.gameObject.name == "Player_Engineer")
+        if (characterPrefab.gameObject.name == "Player_Wrench")
         {
             skinIndexHelper = 8;
         }

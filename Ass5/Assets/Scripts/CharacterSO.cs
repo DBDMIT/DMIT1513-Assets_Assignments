@@ -7,15 +7,7 @@ public class CharacterSO : ScriptableObject
     public Sprite characterSprite;
 
     public int strength, speed, durability;
-    public WeaponType weaponType;
     public GameObject prefab;
-}
-
-public enum WeaponType
-{
-    Sword,
-    Wand,
-    Wrench
 }
 
 public enum Skin

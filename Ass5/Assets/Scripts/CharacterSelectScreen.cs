@@ -14,12 +14,11 @@ public class CharacterSelectScreen : MonoBehaviour
     public List<Button> buttonReferences;
     public CharacterSO[] characterList;
 
-    public UnityEvent OncharacterSelected;
     public static CharacterSelectScreen Instance;
 
     [ContextMenu("debug")]
 
-    private void Awake()
+    private void Start()
     {
         InstantiateCharacterSelect();
     }
@@ -43,7 +42,6 @@ public class CharacterSelectScreen : MonoBehaviour
     public void SelectCharacter(CharacterSO c)
     {
         CharacterSelectSingleton.Instance.SetCharacter(c);
-        OncharacterSelected?.Invoke();
     }
 
     public void DisableButtons()
