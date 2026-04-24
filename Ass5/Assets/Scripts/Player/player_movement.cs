@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
 
 public class player_movement : MonoBehaviour
 {
@@ -12,8 +13,15 @@ public class player_movement : MonoBehaviour
     public float movementSpeed;
     public float attackTime;
 
+    private float timestamp;
+    player_weapon playerWeapon;
+
+    public UnityEvent OnAttack;
+
     private void Awake()
     {
+        playerWeapon = GetComponent<player_weapon>();
+
         movementInput.Enable();
         movementInput.performed += ReadMoveInput;
         movementInput.canceled += ReadMoveInput;
@@ -24,11 +32,11 @@ public class player_movement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         Vector3 moveDirection = (transform.forward * moveVector.y) + (transform.right * moveVector.x);
-        Vector3 deltaMovement = moveDirection * movementSpeed * Time.deltaTime;
-        rb.Move(transform.position + deltaMovement, transform.rotation);
+
+        rb.linearVelocity = new Vector3(moveDirection.x * movementSpeed, rb.linearVelocity.y, moveDirection.z * movementSpeed);
     }
 
     private void ReadMoveInput(InputAction.CallbackContext context)
@@ -38,7 +46,8 @@ public class player_movement : MonoBehaviour
 
     private void Attack(InputAction.CallbackContext context)
     {
-
+        Debug.Log("Attack here");
+        OnAttack?.Invoke();
     }
 }
 

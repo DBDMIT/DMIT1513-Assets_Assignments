@@ -1,10 +1,11 @@
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Animations;
 using UnityEngine.InputSystem;
 
 public class player_weapon : MonoBehaviour
 {
+    public float damageAmount;
+
     public Transform anchorPoint;
     public Camera cam;
     public float orbitRadius = 3f;
@@ -27,6 +28,11 @@ public class player_weapon : MonoBehaviour
     }
 
     private void Update()
+    {
+        RotateWeapon();
+    }
+
+    public void RotateWeapon()
     {
         if (anchorPoint == null || cam == null)
             return;
@@ -70,6 +76,17 @@ public class player_weapon : MonoBehaviour
             if (lookDir.sqrMagnitude > 0.001f)
             {
                 transform.rotation = Quaternion.LookRotation(lookDir);
+            }
+        }
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision != null)
+        {
+            if (collision.gameObject.GetComponent<idamagable>() != null)
+            {
+                collision.gameObject.GetComponent<idamagable>().TakeDamage(damageAmount);
             }
         }
     }

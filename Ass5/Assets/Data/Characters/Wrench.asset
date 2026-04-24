@@ -17,5 +17,4 @@ MonoBehaviour:
   strength: 5
   speed: 5
   durability: 5
-  weaponType: 2
-  prefab: {fileID: 4797093755001127242, guid: c164169fafdf9a24193757f476a3d1bb, type: 3}
+  prefab: {fileID: 4797093755001127242, guid: 89fccafb6e553224dbd9e5fc16a1fbd0, type: 3}
