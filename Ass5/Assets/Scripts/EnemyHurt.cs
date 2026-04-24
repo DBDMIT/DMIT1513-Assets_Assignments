@@ -4,13 +4,13 @@ public class EnemyHurt : MonoBehaviour
 {
     public float damageAmount;
 
-    public void OnCollisionEnter(Collision collision)
+    public void OnTriggerEnter(Collider other)
     {
-        if (collision != null && collision.gameObject.tag == "Enemy")
+        if (other != null && other.gameObject.tag == "Player")
         {
-            if (collision.gameObject.GetComponent<IDamagable>() != null)
+            if (other.gameObject.GetComponent<IDamagable>() != null)
             {
-                collision.gameObject.GetComponent<IDamagable>().TakeDamage(damageAmount);
+                other.gameObject.GetComponent<IDamagable>().TakeDamage(damageAmount);
             }
         }
     }

@@ -4,7 +4,7 @@ using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IDamagable
 {
     [SerializeField] Healthbar healthbar;
     public float health, maxHealth = 1.0f;
@@ -71,14 +71,20 @@ public class Player : MonoBehaviour
 
     public void Die()
     {
+        movementInput.Disable();
+        attackInput.Disable();
+        rb.linearVelocity = Vector3.zero;
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
+        transform.GetChild(2).gameObject.SetActive(false);
+
         StartCoroutine(DieWait());
     }
 
     IEnumerator DieWait()
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(2f);
 
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(3);
     }
 }
 
