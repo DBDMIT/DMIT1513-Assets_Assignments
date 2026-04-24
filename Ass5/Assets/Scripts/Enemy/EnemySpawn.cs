@@ -25,7 +25,7 @@ public class EnemySpawn : MonoBehaviour
 
         if (timeUntilSpawn <= 0)
         {
-            Vector3 position = new Vector3(Random.Range(-28, 28), 0, Random.Range(-18, 18));
+            Vector3 position = new Vector3(Random.Range(-28, 28), 0, Random.Range(-15, 15));
 
             Instantiate(enemyPrefab, position, Quaternion.Euler(0, 0, 0));
             spawnCount++;
