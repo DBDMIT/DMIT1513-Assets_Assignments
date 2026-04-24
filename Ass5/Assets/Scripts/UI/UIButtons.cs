@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ui_buttons : MonoBehaviour
+public class UIButtons : MonoBehaviour
 {
     public void GoToMenu()
     {

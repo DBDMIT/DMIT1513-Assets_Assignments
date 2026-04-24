@@ -2,17 +2,22 @@ using UnityEngine;
 using UnityEngine.Events;
 using static UnityEngine.GraphicsBuffer;
 
-public class Enemy : MonoBehaviour, idamagable
+public class Enemy : MonoBehaviour, IDamagable
 {
     [SerializeField] GameObject target;
+    [SerializeField] Healthbar healthbar;
 
-    public float hp = 1.0f;
+    public float damageAmount;
+
+    public float health, maxHealth = 1.0f;
     public UnityEvent OnDeath;
 
     UnityEngine.AI.NavMeshAgent agent;
 
     private void Awake()
     {
+        healthbar = GetComponentInChildren<Healthbar>();
+
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         agent.updateRotation = false;
     }
@@ -20,6 +25,7 @@ public class Enemy : MonoBehaviour, idamagable
     private void Start()
     {
         target = GameObject.FindWithTag("Player");
+        healthbar.UpdateHealthBar(health, maxHealth);
     }
 
     public void Update()
@@ -29,9 +35,10 @@ public class Enemy : MonoBehaviour, idamagable
 
     public void TakeDamage(float damage)
     {
-        hp -= damage;
+        health -= damage;
+        healthbar.UpdateHealthBar(health, maxHealth);
 
-        if (hp <= 0)
+        if (health <= 0)
         {
             OnDeath?.Invoke();
         }

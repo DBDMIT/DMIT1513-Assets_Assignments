@@ -10,10 +10,7 @@ public class CharacterSelectSingleton : MonoBehaviour
 
     private void Start()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
+        if (Instance == null) Instance = this;
     }
 
     public void SetCharacter(CharacterSO character_) { selectedCharacter = character_; }

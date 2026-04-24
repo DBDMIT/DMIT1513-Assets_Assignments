@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Animations;
 using UnityEngine.InputSystem;
 
-public class player_weapon : MonoBehaviour
+public class PlayerWeapon : MonoBehaviour
 {
     public float damageAmount;
 
@@ -82,11 +82,11 @@ public class player_weapon : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision != null)
+        if (collision != null && collision.gameObject.tag == "Enemy")
         {
-            if (collision.gameObject.GetComponent<idamagable>() != null)
+            if (collision.gameObject.GetComponent<IDamagable>() != null)
             {
-                collision.gameObject.GetComponent<idamagable>().TakeDamage(damageAmount);
+                collision.gameObject.GetComponent<IDamagable>().TakeDamage(damageAmount);
             }
         }
     }

@@ -3,14 +3,14 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-public class ui_pausemenu : MonoBehaviour
+public class UIPause : MonoBehaviour
 {
     public InputAction pauseInput;
 
     public GameObject pauseMenuUI;
     public GameObject gameUI;
 
-    public static ui_pausemenu instance;
+    public static UIPause instance;
     private bool isPaused = false;
     public event Action<bool> OnPauseToggle;
 

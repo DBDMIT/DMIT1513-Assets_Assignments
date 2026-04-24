@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class menu_parallax : MonoBehaviour
+public class MenuParallax : MonoBehaviour
 {
     public float offsetMultiplier = 1f;
     public float smoothTime = 0.3f;

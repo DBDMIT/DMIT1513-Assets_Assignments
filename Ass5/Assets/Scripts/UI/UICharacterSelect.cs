@@ -8,7 +8,7 @@ using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using NUnit.Framework;
 
-public class ui_characterselect : MonoBehaviour
+public class UICharacterSelect : MonoBehaviour
 {
     public bool initialInstantiation = false;
 
@@ -19,39 +19,7 @@ public class ui_characterselect : MonoBehaviour
     public Transform parent;
     public GameObject buttonPrefab;
     public UnityEvent OncharacterSelected;
-    public static ui_characterselect Instance;
-
-    public void StartGame()
-    {
-        SceneManager.LoadScene(1);
-    }
-
-    public void QuitGame()
-    {
-        Debug.Log("The game should quit here.");
-        Application.Quit();
-    }
-
-    public void InstantiateCharacterSelect()
-    {
-        if (!initialInstantiation)
-        {
-            foreach (CharacterSO character in characterList)
-            {
-                GameObject tmp = Instantiate(buttonPrefab, parent);
-                Image portrait = tmp.GetComponentsInChildren<Image>()[1];
-                Image indicator = tmp.GetComponentsInChildren<Image>()[1];
-                portrait.sprite = character.characterSprite;
-                indicator.sprite = character.characterSprite;
-
-                Button b = tmp.GetComponent<Button>();
-                buttonReferences.Add(b);
-                b.onClick.AddListener(delegate { SelectCharacter(character); });
-            }
-
-            initialInstantiation = true;
-        }
-    }
+    public static UICharacterSelect Instance;
 
     public void SelectCharacter(CharacterSO c)
     {
