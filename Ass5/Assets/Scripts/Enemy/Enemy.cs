@@ -55,6 +55,7 @@ public class Enemy : MonoBehaviour, IDamagable
 
     public void TakeDamage(float damage)
     {
+        SoundManager.Instance.PlaySound3D("EnemyHurt", transform.position);
         health -= damage;
         healthbar.UpdateHealthBar(health, maxHealth);
 

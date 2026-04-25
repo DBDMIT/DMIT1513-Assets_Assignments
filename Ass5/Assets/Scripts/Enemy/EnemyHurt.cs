@@ -10,6 +10,7 @@ public class EnemyHurt : MonoBehaviour
         {
             if (other.gameObject.GetComponent<IDamagable>() != null)
             {
+                SoundManager.Instance.PlaySound3D("EnemyAttack", transform.position);
                 other.gameObject.GetComponent<IDamagable>().TakeDamage(damageAmount);
             }
         }

@@ -59,6 +59,8 @@ public class Player : MonoBehaviour, IDamagable
 
     public void TakeDamage(float damage)
     {
+        SoundManager.Instance.PlaySound3D("PlayerHurt", transform.position);
+
         health -= damage;
         healthbar.UpdateHealthBar(health, maxHealth);
 
