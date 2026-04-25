@@ -788,6 +788,9 @@ MonoBehaviour:
   - groupID: EnemyAttack
     clips:
     - {fileID: 8300000, guid: 26f87fa4a58bbb84ca2de6e0bec9c1f7, type: 3}
+  - groupID: EnemySpawn
+    clips:
+    - {fileID: 8300000, guid: f8d2c83e66fc67c4f89fdf82abecc48f, type: 3}
   - groupID: Click
     clips:
     - {fileID: 8300000, guid: 5282702f83e17c243aaec0ff07b28a8c, type: 3}

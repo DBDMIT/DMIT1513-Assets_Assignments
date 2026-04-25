@@ -86,6 +86,7 @@ public class PlayerWeapon : MonoBehaviour
         {
             if (collision.gameObject.GetComponent<IDamagable>() != null)
             {
+                SoundManager.Instance.PlaySound3D("PlayerAttack", transform.position);
                 collision.gameObject.GetComponent<IDamagable>().TakeDamage(damageAmount);
             }
         }

@@ -28,6 +28,7 @@ public class EnemySpawn : MonoBehaviour
             Vector3 position = new Vector3(Random.Range(-28, 28), 0, Random.Range(-15, 15));
 
             Instantiate(enemyPrefab, position, Quaternion.Euler(0, 0, 0));
+            SoundManager.Instance.PlaySound3D("EnemySpawn", transform.position);
             spawnCount++;
             SetTimeUntilSpawn();
         }
